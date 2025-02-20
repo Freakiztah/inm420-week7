@@ -4,35 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Let's Go</title>
+    <title>Library</title>
 
-    <!-- Main Stylesheets -->
-    <link rel="stylesheet" href="/assets/css/style.css"> 
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/lightbox.css">
 
     <link rel="icon" type="image/png" href="/assets/images/favicon.ico">
 
-    <!-- jQuery (for Lightbox and Other Scripts) -->
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
 
-    <!-- Background Animation Library -->
+    <!-- Other JS -->
     <script src="/assets/js/granim.min.js"></script>
-
-    <!-- FontAwesome for Icons (Used for YouTube Link) -->
+    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    <!-- Leaflet CSS (for Map) -->
+
+    <!-- Leaflet CSS (CDN) -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 
 <body>
 
-    <!-- Animated Background -->
     <canvas id="canvas-image-blending"></canvas>
 
-    <!-- Navigation Bar -->
     <nav>
-        <img src="/assets/images/giflogo.gif" alt="Logo"> <!-- Site Logo -->
+        <img src="/assets/images/giflogo.gif" alt="Logo">
         <ul class="nav-menu">
             <li><a href="#">Home</a></li>
             <li><a href="#">Contact</a></li>
@@ -41,15 +39,14 @@
         </ul>
     </nav>
 
-    <!-- Hero Section -->
     <header class="page-header">
         <div class="hero-logo-container">
             <img src="/assets/images/letsgo.png" alt="Lets Go Hero Logo" class="hero-logo">
         </div>
-        <h1>El Nido Palawan, Philippines</h1>
+        <h1>Palawan, Philippines</h1>
     </header>
     
-    <!-- Image Lightbox Gallery -->
+<!-- lighbox image gallery -->
     <div class="lightbox-container">
         <a href="/assets/images/palawan/1.jpg" data-lightbox="palawan">
             <img src="/assets/images/palawan/1.jpg" width="100" alt="Image #1">
@@ -83,7 +80,7 @@
         </a>
     </div>
 
-    <!-- Section for Map -->
+    <!-- map section -->
     <header class="page-header2">
         <h1>Where is it?</h1>
     </header>
@@ -91,26 +88,31 @@
         <div id="map"></div>
     </div>
 
-    <!-- Section for External Links -->
+
+    <!-- Section for external links -->
     <div class="external-links">
         <a href="https://www.youtube.com/watch?v=Xah_5V6vz0w" target="_blank" class="youtube-link">
             <i class="fab fa-youtube"></i> Watch Palawan Travel Guide on YouTube
         </a>
     </div>
 
-    <!-- Footer -->
+
     <footer>
         <p>&copy; Michael Victor Arasga, 2025</p>
     </footer>
 
-    <!-- Lightbox JavaScript -->
+    <!-- Lightbox JS Path -->
     <script src="/assets/js/lightbox.js"></script>
 
-    <!-- Leaflet JS (for Map) -->
+    <!-- Lightbox Options (AFTER script loads) -->
+    
+
+    <!-- Leaflet JS (CDN) -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-    <!-- Main JavaScript -->
-    <script src="/assets/js/main.js"></script> 
+    
+    <!-- main javascript -->
+    <script src="/assets/js/main.js"></script>
 
 </body>
 

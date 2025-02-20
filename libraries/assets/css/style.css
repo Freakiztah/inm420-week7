@@ -1,4 +1,4 @@
-/* Global Layout */
+/* Global Styles */
 html, body {
     margin: 0;
     padding: 0;
@@ -10,7 +10,27 @@ html, body {
     flex-direction: column;
 }
 
-/* Navigation Bar */
+/* Wrapper for Flex Footer */
+.wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Granim Background */
+#canvas-image-blending {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Navbar */
 nav {
     background: url('/assets/images/banner.jpg') center/800px;
     display: flex;
@@ -19,8 +39,8 @@ nav {
     padding: 10px 30px;
     height: 70px;
     width: 100%;
-    position: relative;
     box-sizing: border-box;
+    position: relative;
 }
 
 /* Logo */
@@ -40,10 +60,7 @@ nav img {
     padding: 0;
 }
 
-.nav-menu li {
-    display: inline-block;
-}
-
+/* Navigation Links */
 .nav-menu li a {
     text-decoration: none;
     font-size: 18px;
@@ -63,59 +80,27 @@ nav img {
     text-shadow: 3px 3px 8px rgb(200, 255, 129);
 }
 
-/* Lightbox Container */
-.lightbox-container {
+/* Hero Section */
+.hero-logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    margin: 20px auto;
-    flex-wrap: wrap;
-    max-width: 100%;
+    margin: 20px 0 10px;
 }
 
-/* Image Box */
-.lightbox-container a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 120px;
-    height: 120px;
-    border-radius: 8px;
-    background: #222;
-    position: relative;
-    border: 3px solid white;
-    overflow: visible;
+/* Hero Logo */
+.hero-logo {
+    max-width: 150px;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+    transition: transform 0.8s ease-out;
 }
 
-/* Image Styling */
-.lightbox-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s;
-    border-radius: 8px;
+.hero-logo:hover {
+    transform: rotate(360deg) scale(1.05);
+    transition: transform 0.2s ease-in;
 }
 
-/* Hover Zoom Effect */
-.lightbox-container a:hover img {
-    transform: scale(1.3);
-    z-index: 10;
-    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.4);
-}
-
-/* Background Animation */
-#canvas-image-blending {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    pointer-events: none;
-}
-
-/* Header Styling */
+/* Page Headers */
 .page-header, .page-header2 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
@@ -139,27 +124,46 @@ nav img {
     letter-spacing: 2px;
 }
 
-/* Hero Logo */
-.hero-logo-container {
+/* Lightbox Container */
+.lightbox-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0 10px;
+    gap: 15px;
+    margin: 20px auto;
+    max-width: 100%;
+    flex-wrap: wrap;
 }
 
-.hero-logo {
-    max-width: 150px;
-    height: auto;
-    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
-    transition: transform 0.8s ease-out;
+/* Image Box */
+.lightbox-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    background: #222;
+    position: relative;
+    border: 3px solid white;
+    overflow: hidden;
 }
 
-/* Fast Rotate Effect on Hover */
-.hero-logo:hover {
-    transform: rotate(360deg) scale(1.05);
-    transition: transform 0.2s ease-in;
+/* Image Styling */
+.lightbox-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 8px;
 }
 
+/* Hover Effect */
+.lightbox-container a:hover img {
+    transform: scale(1.3);
+    z-index: 10;
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.4);
+}
 
 /* Map Container */
 #map-container {
@@ -168,10 +172,10 @@ nav img {
     align-items: center;
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto 8px;
+    margin: 20px auto 8px;
 }
 
-/* Map Styling */
+/* Map */
 #map {
     height: 450px;
     width: 100%;
@@ -180,7 +184,7 @@ nav img {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* External Links Section */
+/* External Links */
 .external-links {
     display: flex;
     justify-content: center;
@@ -189,7 +193,7 @@ nav img {
     padding: 10px;
 }
 
-/* YouTube Link Styling */
+/* YouTube Link */
 .youtube-link {
     display: flex;
     align-items: center;
@@ -228,16 +232,7 @@ footer {
     margin-top: auto;
 }
 
-/* Wrapper to Push Footer Down */
-.wrapper {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Mobile First Responsive*/
+/* Mobile-First Responsive */
 @media (max-width: 768px) {
     #map-container {
         width: 95%;
